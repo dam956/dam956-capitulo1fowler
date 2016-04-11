@@ -49,7 +49,7 @@ class Customer {
 	        	+ " frequent renter points";
 	        return result;
 	    }
-	   private int amountFor(Rental each) {
+	   private double amountFor(Rental each) {
 		   int thisAmount = 0;
 		       switch (each.getMovie().getPriceCode()) {
 		           case Movie.REGULAR:
