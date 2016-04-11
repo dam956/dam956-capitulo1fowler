@@ -36,9 +36,6 @@ class Customer {
 	                   " frequent renter points";
 	        return result;
 	    }
-	   private double amountFor(Rental aRental) {
-		   return aRental.getCharge();
-	   }
 	   
 	   private double getTotalCharge() {
 	         double result = 0;

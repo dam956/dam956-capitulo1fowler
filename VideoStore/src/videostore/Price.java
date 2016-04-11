@@ -2,7 +2,12 @@ package videostore;
 
 abstract class Price {
 	 	abstract double getCharge(int daysRented);
+	 	
 	 	abstract int getPriceCode();
+	 	
+	 	 int getFrequentRenterPoints(int daysRented){
+	         return 1;
+	     }
 	 }
 	 class ChildrensPrice extends Price {
 		 double getCharge(int daysRented){
@@ -16,6 +21,9 @@ abstract class Price {
 	  }
 	 }
 	 class NewReleasePrice extends Price {
+		 int getFrequentRenterPoints(int daysRented) {
+	         return (daysRented > 1) ? 2: 1;
+		 }
 		 double getCharge(int daysRented){
 	         return daysRented * 3;
 	     }
